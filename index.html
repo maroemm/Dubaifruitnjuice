@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Dubai Fruit 'n Juice">
     
-    <!-- SEO Meta Tags -->
     <title>Dubai Fruit 'n Juice | Luxe Sap Catering & Foodtruck</title>
     <meta name="description" content="Dubai Fruit 'n Juice biedt luxe sap catering voor bruiloften en zakelijke events. Vers geperste sappen, smoothies, mocktails en matcha vanuit onze iconische bar.">
     <meta name="keywords" content="sap catering, foodtruck bruiloft, luxe sapbar, Dubai Fruit n Juice, verse sappen, mocktails catering, matcha bar, evenementen catering">
     <link rel="canonical" href="https://www.dubaifruitnjuice.nl/">
     
-    <!-- Open Graph / Facebook / Instagram -->
+    <link rel="icon" type="image/jpeg" href="410194085_1858449394619373_6855151003907144234_n.jpg">
+    <link rel="apple-touch-icon" href="410194085_1858449394619373_6855151003907144234_n.jpg">
+
+    <meta property="og:locale" content="nl_NL">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.dubaifruitnjuice.nl/">
     <meta property="og:title" content="Dubai Fruit 'n Juice | Luxe Sap Catering & Foodtruck">
     <meta property="og:description" content="Ervaar 100% vers geperste sappen en luxe catering op uw event. Boek onze rijdende bar voor bruiloften en bedrijfsfeesten.">
     <meta property="og:image" content="IMG_1219.JPG">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.dubaifruitnjuice.nl/">
     <meta property="twitter:title" content="Dubai Fruit 'n Juice | Luxe Sap Catering">
     <meta property="twitter:description" content="De ultieme sap-ervaring op locatie. Versgeperst, luxe en uniek.">
     <meta property="twitter:image" content="IMG_1219.JPG">
 
-    <!-- Structured Data (JSON-LD) voor Google -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -73,12 +76,17 @@
             --black: #050505;
         }
 
+        /* Smooth scrolling verplaatst naar html + padding toegevoegd voor de fixed navbar */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background: #000;
             color: white;
             overflow-x: hidden;
-            scroll-behavior: smooth;
         }
 
         .font-display {
@@ -233,14 +241,12 @@
 </head>
 <body>
 
-    <!-- NAV -->
     <nav id="nav" class="fixed w-full z-50 py-5 px-6" aria-label="Hoofdnavigatie">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#home" title="Dubai Fruit 'n Juice Home">
                 <img src="410194085_1858449394619373_6855151003907144234_n.jpg" class="h-16" alt="Dubai Fruit 'n Juice Logo - Luxe Sap Catering">
             </a>
             
-            <!-- Desktop Menu -->
             <div class="hidden md:flex gap-10 text-xs uppercase tracking-[0.25em]">
                 <a href="#home" class="hover:text-[#D4AF37] transition-colors text-white">Home</a>
                 <a href="#foodtruck" class="hover:text-[#D4AF37] transition-colors text-white">Foodtruck</a>
@@ -249,14 +255,12 @@
                 <a href="#contact" class="gold font-bold">Boeken</a>
             </div>
 
-            <!-- Mobile Toggle -->
             <button id="menu-toggle" class="md:hidden text-[#D4AF37] text-2xl focus:outline-none" aria-label="Open menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black flex flex-col items-center justify-center space-y-8 md:hidden">
         <button id="menu-close" class="absolute top-8 right-8 text-[#D4AF37] text-3xl" aria-label="Sluit menu">
             <i class="fas fa-times"></i>
@@ -268,7 +272,6 @@
         <a href="#contact" class="text-2xl uppercase tracking-widest gold mobile-link font-bold">Boeken</a>
     </div>
 
-    <!-- HERO -->
     <section id="home" class="hero px-6">
         <div class="max-w-4xl">
             <h1 class="text-4xl md:text-7xl font-display mb-8 reveal">
@@ -286,7 +289,6 @@
         </div>
     </section>
 
-    <!-- FOODTRUCK -->
     <section id="foodtruck" class="py-28 px-6 bg-white text-black">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div class="relative reveal">
@@ -327,7 +329,6 @@
         </div>
     </section>
 
-    <!-- MENU / CONCEPT -->
     <section id="menu" class="py-28 px-6 bg-[#050505]">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-4xl font-display gold mb-16 uppercase tracking-widest">
@@ -374,7 +375,6 @@
         </div>
     </section>
 
-    <!-- GALLERY -->
     <section id="gallery" class="py-28 px-6 bg-white">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-3xl font-display text-center mb-16 uppercase tracking-widest text-black">Visuele Impressie</h2>
@@ -389,7 +389,6 @@
                 <img src="IMG-20251226-WA0017.jpg" class="rounded-lg shadow-md" alt="Verse granaatappelsap bereiding">
             </div>
             
-            <!-- Instagram Link -->
             <div class="text-center reveal">
                 <a href="https://www.instagram.com/dubaifruitnjuice/" target="_blank" class="inline-flex items-center gap-3 px-8 py-3 rounded-full border border-black/10 text-black hover:bg-black hover:text-white transition-all duration-300">
                     <i class="fab fa-instagram text-xl"></i>
@@ -399,12 +398,10 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="py-28 px-6 bg-black">
         <div class="max-w-6xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-start">
                 
-                <!-- Tekst & Socials -->
                 <div class="reveal">
                     <h2 class="text-5xl font-display gold mb-8 uppercase tracking-tighter">
                         Let's <span class="italic">Sparkle</span> <br>Your Event
@@ -439,68 +436,66 @@
                     </a>
                 </div>
 
-                <!-- FORMULIER -->
                 <div class="bg-[#111] p-8 md:p-12 rounded-2xl border border-white/5 reveal shadow-2xl">
                     <form action="https://formsubmit.co/info@dubaifruitnjuice.nl" method="POST" class="space-y-8">
 
-    <!-- Hidden settings (onzichtbaar) -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="Nieuwe aanvraag via website">
-    <input type="hidden" name="_next" value="https://www.dubaifruitnjuice.nl/bedankt.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nieuwe aanvraag via website">
+                        <input type="hidden" name="_next" value="https://www.dubaifruitnjuice.nl/bedankt.html">
 
-    <div class="grid md:grid-cols-2 gap-8">
-    <div class="space-y-2">
-        <label for="name" class="text-[10px] uppercase gold font-bold tracking-widest">Naam</label>
-        <input type="text" id="name" name="Naam" placeholder="Uw volledige naam" required class="form-input">
-    </div>
-    <div class="space-y-2">
-        <label for="email" class="text-[10px] uppercase gold font-bold tracking-widest">E-mail</label>
-        <input type="email" id="email" name="Email" placeholder="email@voorbeeld.com" required class="form-input">
-    </div>
-</div>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label for="name" class="text-[10px] uppercase gold font-bold tracking-widest">Naam</label>
+                                <input type="text" id="name" name="Naam" placeholder="Uw volledige naam" required class="form-input">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email" class="text-[10px] uppercase gold font-bold tracking-widest">E-mail</label>
+                                <input type="email" id="email" name="Email" placeholder="email@voorbeeld.com" required class="form-input">
+                            </div>
+                        </div>
 
-<div class="space-y-2">
-    <label for="phone" class="text-[10px] uppercase gold font-bold tracking-widest">Telefoonnummer</label>
-    <input type="tel" id="phone" name="Telefoonnummer" placeholder="+31 6 12345678" required class="form-input">
-</div>
+                        <div class="space-y-2">
+                            <label for="phone" class="text-[10px] uppercase gold font-bold tracking-widest">Telefoonnummer</label>
+                            <input type="tel" id="phone" name="Telefoonnummer" placeholder="+31 6 12345678" required class="form-input">
+                        </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
-        <div class="space-y-2">
-            <label for="date" class="text-[10px] uppercase gold font-bold tracking-widest">Datum Event</label>
-            <input type="date" id="date" name="Datum" required class="form-input">
-        </div>
-        <div class="space-y-2">
-            <label for="type" class="text-[10px] uppercase gold font-bold tracking-widest">Type Event</label>
-            <input type="text" id="type" name="Type Event" placeholder="Bijv. Bruiloft" required class="form-input">
-        </div>
-    </div>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label for="date" class="text-[10px] uppercase gold font-bold tracking-widest">Datum Event</label>
+                                <input type="date" id="date" name="Datum" required class="form-input">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="type" class="text-[10px] uppercase gold font-bold tracking-widest">Type Event</label>
+                                <input type="text" id="type" name="Type Event" placeholder="Bijv. Bruiloft" required class="form-input">
+                            </div>
+                        </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
-        <div class="space-y-2">
-            <label for="count" class="text-[10px] uppercase gold font-bold tracking-widest">Aantal Personen</label>
-            <input type="number" id="count" name="Personen" placeholder="Bijv. 100" required class="form-input">
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-            <div class="space-y-2">
-                <label for="start" class="text-[10px] uppercase gold font-bold tracking-widest">Start</label>
-                <input type="time" id="start" name="Starttijd" required class="form-input">
-            </div>
-            <div class="space-y-2">
-                <label for="end" class="text-[10px] uppercase gold font-bold tracking-widest">Eind</label>
-                <input type="time" id="end" name="Eindtijd" required class="form-input">
-            </div>
-        </div>
-    </div>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label for="count" class="text-[10px] uppercase gold font-bold tracking-widest">Aantal Personen</label>
+                                <input type="number" id="count" name="Personen" placeholder="Bijv. 100" required class="form-input">
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label for="start" class="text-[10px] uppercase gold font-bold tracking-widest">Start</label>
+                                    <input type="time" id="start" name="Starttijd" required class="form-input">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="end" class="text-[10px] uppercase gold font-bold tracking-widest">Eind</label>
+                                    <input type="time" id="end" name="Eindtijd" required class="form-input">
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="space-y-2">
-        <label for="message" class="text-[10px] uppercase gold font-bold tracking-widest">Uw Bericht</label>
-        <textarea id="message" name="Bericht" rows="3" placeholder="Aanvullende wensen of details..." class="form-input resize-none"></textarea>
-    </div>
+                        <div class="space-y-2">
+                            <label for="message" class="text-[10px] uppercase gold font-bold tracking-widest">Uw Bericht</label>
+                            <textarea id="message" name="Bericht" rows="3" placeholder="Aanvullende wensen of details..." class="form-input resize-none"></textarea>
+                        </div>
 
-    <button type="submit" class="btn-gold w-full text-sm">
-        OFFERTE AANVRAGEN
-    </button>
-</form>
+                        <button type="submit" class="btn-gold w-full text-sm">
+                            OFFERTE AANVRAGEN
+                        </button>
+                    </form>
                 </div>
 
             </div>
@@ -516,68 +511,70 @@
     </footer>
 
     <script>
-        // Navigatie scroll effect
-        const nav = document.getElementById("nav");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 80) {
-                nav.classList.add("nav-active");
-                nav.classList.replace("py-5", "py-3");
-            } else {
-                nav.classList.remove("nav-active");
-                nav.classList.replace("py-3", "py-5");
-            }
-        });
-
-        // Mobile Menu Logica
-        const menuToggle = document.getElementById("menu-toggle");
-        const menuClose = document.getElementById("menu-close");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const mobileLinks = document.querySelectorAll(".mobile-link");
-
-        menuToggle.addEventListener("click", () => {
-            mobileMenu.classList.add("active");
-            document.body.style.overflow = "hidden";
-        });
-
-        const closeMenu = () => {
-            mobileMenu.classList.remove("active");
-            document.body.style.overflow = "auto";
-        };
-
-        menuClose.addEventListener("click", closeMenu);
-        mobileLinks.forEach(link => link.addEventListener("click", closeMenu));
-
-        // Scroll Reveal
-        const reveals = document.querySelectorAll(".reveal");
-        function reveal() {
-            reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const elementTop = el.getBoundingClientRect().top;
-                const elementVisible = 100;
-                if (elementTop < windowHeight - elementVisible) {
-                    el.classList.add("active");
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigatie scroll effect
+            const nav = document.getElementById("nav");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 80) {
+                    nav.classList.add("nav-active");
+                    nav.classList.replace("py-5", "py-3");
+                } else {
+                    nav.classList.remove("nav-active");
+                    nav.classList.replace("py-3", "py-5");
                 }
             });
-        }
 
-        window.addEventListener("scroll", reveal);
-        window.addEventListener("load", reveal);
+            // Mobile Menu Logica
+            const menuToggle = document.getElementById("menu-toggle");
+            const menuClose = document.getElementById("menu-close");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const mobileLinks = document.querySelectorAll(".mobile-link");
+
+            menuToggle.addEventListener("click", () => {
+                mobileMenu.classList.add("active");
+                document.body.style.overflow = "hidden";
+            });
+
+            const closeMenu = () => {
+                mobileMenu.classList.remove("active");
+                document.body.style.overflow = "auto";
+            };
+
+            menuClose.addEventListener("click", closeMenu);
+            mobileLinks.forEach(link => link.addEventListener("click", closeMenu));
+
+            // Scroll Reveal
+            const reveals = document.querySelectorAll(".reveal");
+            function reveal() {
+                reveals.forEach(el => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = el.getBoundingClientRect().top;
+                    const elementVisible = 100;
+                    if (elementTop < windowHeight - elementVisible) {
+                        el.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", reveal);
+            window.addEventListener("load", reveal); // Initiele check
+
+            // Form data opslaan in local storage
+            const form = document.querySelector("form");
+            if(form) {
+                form.addEventListener("submit", function() {
+                    const data = {
+                        naam: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        telefoon: document.getElementById("phone").value,
+                        datum: document.getElementById("date").value,
+                        type: document.getElementById("type").value,
+                        personen: document.getElementById("count").value
+                    };
+                    localStorage.setItem("formData", JSON.stringify(data));
+                });
+            }
+        });
     </script>
-<script>
-const form = document.querySelector("form");
-
-form.addEventListener("submit", function() {
-    const data = {
-        naam: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        telefoon: document.getElementById("phone").value,
-        datum: document.getElementById("date").value,
-        type: document.getElementById("type").value,
-        personen: document.getElementById("count").value
-    };
-
-    localStorage.setItem("formData", JSON.stringify(data));
-});
-</script>
 </body>
 </html>
