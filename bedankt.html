@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedankt | Dubai Fruit 'n Juice</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .gold { color: #D4AF37; }
+
+        .card {
+            background: #111;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 1s ease;
+        }
+
+        .btn-gold {
+            background: #D4AF37;
+            color: black;
+            padding: 14px 30px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-gold:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212,175,55,0.3);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(212,175,55,0.4);
+            color: #D4AF37;
+            padding: 12px 28px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 12px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212,175,55,0.1);
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1 class="text-4xl mb-4 gold font-bold">Bedankt!</h1>
+
+    <p class="text-lg mb-2">
+        Uw aanvraag is succesvol verzonden.
+    </p>
+
+    <p class="text-gray-400 mb-6">
+        Wij nemen zo snel mogelijk contact met u op.
+    </p>
+
+    <p class="text-sm text-gray-500 mb-2">
+        Wilt u sneller contact?
+    </p>
+
+    <p class="text-sm text-gray-400 mb-4">
+        Start direct een WhatsApp gesprek:
+    </p>
+
+    <!-- WhatsApp knop -->
+    <a id="whatsappBtn" href="#" class="btn-gold">
+        <i class="fab fa-whatsapp text-lg"></i>
+        WhatsApp ons direct
+    </a>
+
+    <br>
+
+    <!-- Terug knop -->
+    <a href="index.html" class="btn-outline">
+        Terug naar website
+    </a>
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("formData"));
+
+if (data) {
+    const message = `Hallo, mijn naam is ${data.naam}.
+Ik heb zojuist een aanvraag gedaan via de website.
+
+📅 Datum: ${data.datum}
+🎉 Type event: ${data.type}
+👥 Personen: ${data.personen}
+📞 Telefoon: ${data.telefoon}
+
+Kunt u contact met mij opnemen?`;
+
+    const url = "https://wa.me/31616215693?text=" + encodeURIComponent(message);
+
+    document.getElementById("whatsappBtn").href = url;
+}
+</script>
+
+</body>
+</html>
