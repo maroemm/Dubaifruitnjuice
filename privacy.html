@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="robots" content="noindex, nofollow"> <!-- Vaak wil je privacy pagina's niet in Google -->
+    
+    <title>Privacy & Cookies | Dubai Fruit 'n Juice</title>
+    
+    <!-- Gewijzigde favicon naar Favicon.png -->
+    <link rel="icon" type="image/png" href="Favicon.png">
+    <link rel="apple-touch-icon" href="Favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+        :root {
+            --gold: #D4AF37;
+            --black: #050505;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .gold {
+            color: var(--gold);
+        }
+
+        /* NAVBAR (Meteen met zwarte achtergrond voor subpagina) */
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        /* MOBILE MENU */
+        #mobile-menu {
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(100%);
+        }
+
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* BUTTONS */
+        .btn-outline {
+            background: transparent;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            border: 1px solid var(--gold);
+            text-transform: uppercase;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+        }
+
+        /* CARDS */
+        .card {
+            background: #111;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 40px;
+        }
+        
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        p, li {
+            color: #9ca3af; /* tailwind gray-400 */
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATIE (Linkt nu terug naar index.html) -->
+    <nav id="nav" class="fixed w-full z-50 py-3 px-6 border-b border-white/5" aria-label="Hoofdnavigatie">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" title="Terug naar Home">
+                <img src="410194085_1858449394619373_6855151003907144234_n.jpg" class="h-14" alt="Dubai Fruit 'n Juice Logo">
+            </a>
+            
+            <div class="hidden md:flex gap-10 text-xs uppercase tracking-[0.25em]">
+                <a href="index.html#home" class="hover:text-[#D4AF37] transition-colors text-white">Home</a>
+                <a href="index.html#foodtruck" class="hover:text-[#D4AF37] transition-colors text-white">Foodtruck</a>
+                <a href="index.html#menu" class="hover:text-[#D4AF37] transition-colors text-white">Concept</a>
+                <a href="index.html#contact" class="gold font-bold">Boeken</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-[#D4AF37] text-2xl focus:outline-none" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-black flex flex-col items-center justify-center space-y-8 md:hidden">
+        <button id="menu-close" class="absolute top-8 right-8 text-[#D4AF37] text-3xl" aria-label="Sluit menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html#home" class="text-2xl uppercase tracking-widest hover:text-[#D4AF37] transition-colors mobile-link">Home</a>
+        <a href="index.html#foodtruck" class="text-2xl uppercase tracking-widest hover:text-[#D4AF37] transition-colors mobile-link">Foodtruck</a>
+        <a href="index.html#menu" class="text-2xl uppercase tracking-widest hover:text-[#D4AF37] transition-colors mobile-link">Concept</a>
+        <a href="index.html#contact" class="text-2xl uppercase tracking-widest gold mobile-link font-bold">Boeken</a>
+    </div>
+
+    <!-- PRIVACY CONTENT -->
+    <main class="pt-32 pb-24 px-6 min-h-screen">
+        <div class="max-w-3xl mx-auto">
+            
+            <div class="mb-12">
+                <a href="index.html" class="btn-outline mb-8">
+                    <i class="fas fa-arrow-left"></i> Terug naar home
+                </a>
+                <h1 class="text-4xl md:text-5xl font-display uppercase tracking-tighter mb-4">
+                    Privacybeleid <span class="gold italic">& Cookies</span>
+                </h1>
+                <p class="text-xs uppercase tracking-widest text-gray-500 font-bold">Laatst bijgewerkt op: Maart 2026</p>
+            </div>
+
+            <div class="card space-y-8">
+                
+                <section>
+                    <h2>1. Wie zijn wij?</h2>
+                    <p>Dubai Fruit 'n Juice is gevestigd in Nederland en biedt luxe sap catering op locatie aan. Wij respecteren de privacy van de bezoekers van onze website en dragen er zorg voor dat de persoonlijke informatie die u ons verschaft vertrouwelijk wordt behandeld, conform de Algemene Verordening Gegevensbescherming (AVG).</p>
+                    <p><strong>Website:</strong> www.dubaifruitnjuice.nl<br>
+                    <strong>E-mailadres:</strong> info@dubaifruitnjuice.nl</p>
+                </section>
+
+                <div class="h-px bg-white/10 w-full"></div>
+
+                <section>
+                    <h2>2. Welke gegevens verzamelen wij?</h2>
+                    <p>Wanneer u gebruikmaakt van onze website of contact met ons opneemt voor een offerte, kunnen wij de volgende persoonsgegevens verwerken:</p>
+                    <ul>
+                        <li>Voor- en achternaam</li>
+                        <li>Telefoonnummer en e-mailadres</li>
+                        <li>Gegevens over uw evenement (zoals datum, locatie en aantal personen)</li>
+                        <li>Gegevens over uw activiteiten op onze website (via cookies)</li>
+                        <li>Internetbrowser en apparaat type</li>
+                    </ul>
+                </section>
+
+                <div class="h-px bg-white/10 w-full"></div>
+
+                <section>
+                    <h2>3. Waarom hebben we deze gegevens nodig?</h2>
+                    <p>Dubai Fruit 'n Juice verwerkt uw persoonsgegevens voor de volgende doelen:</p>
+                    <ul>
+                        <li>Het kunnen bellen of e-mailen indien dit nodig is om onze dienstverlening uit te kunnen voeren (offertes opmaken, afspraken inplannen).</li>
+                        <li>Het afhandelen van uw betaling indien u een boeking bij ons plaatst.</li>
+                        <li>Het analyseren van uw gedrag op de website om daarmee de website te verbeteren.</li>
+                    </ul>
+                </section>
+
+                <div class="h-px bg-white/10 w-full"></div>
+
+                <section>
+                    <h2>4. Hoe lang we gegevens bewaren</h2>
+                    <p>Wij bewaren uw persoonsgegevens niet langer dan strikt nodig is om de doelen te realiseren waarvoor uw gegevens worden verzameld. Contactaanvragen (via het webformulier of WhatsApp) worden verwijderd zodra de aanvraag is afgehandeld en er geen samenwerking uit voortvloeit.</p>
+                </section>
+
+                <div class="h-px bg-white/10 w-full"></div>
+
+                <section>
+                    <h2>5. Cookies die wij gebruiken</h2>
+                    <p>Dubai Fruit 'n Juice gebruikt alleen technische, functionele en analytische cookies die geen inbreuk maken op uw privacy. Een cookie is een klein tekstbestand dat bij het eerste bezoek aan deze website wordt opgeslagen op uw computer, tablet of smartphone.</p>
+                    <p>De cookies die wij gebruiken zijn noodzakelijk voor de technische werking van de website en uw gebruiksgemak. Ze zorgen ervoor dat de website naar behoren werkt en onthouden bijvoorbeeld uw voorkeursinstellingen. U kunt zich afmelden voor cookies door uw internetbrowser zo in te stellen dat deze geen cookies meer opslaat.</p>
+                </section>
+
+                <div class="h-px bg-white/10 w-full"></div>
+
+                <section>
+                    <h2>6. Gegevens inzien, aanpassen of verwijderen</h2>
+                    <p>U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of te verwijderen. Daarnaast heeft u het recht om uw eventuele toestemming voor de gegevensverwerking in te trekken of bezwaar te maken tegen de verwerking van uw persoonsgegevens door ons bedrijf.</p>
+                    <p>U kunt een verzoek tot inzage, correctie of verwijdering sturen naar info@dubaifruitnjuice.nl. Wij zullen zo snel mogelijk, maar in ieder geval binnen vier weken, op uw verzoek reageren.</p>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-12 text-center text-gray-500 text-sm border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <img src="410194085_1858449394619373_6855151003907144234_n.jpg" class="h-12 mx-auto mb-6 opacity-50 grayscale hover:grayscale-0 transition-all cursor-pointer" alt="Dubai Fruit n Juice Footer Logo">
+            <p class="mb-2 uppercase tracking-[0.3em] text-[10px] gold font-bold">Dubai Fruit 'n Juice | Luxe Sap Catering & Foodtruck</p>
+            <p>© 2026 Dubai Fruit 'n Juice. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simpele mobile menu logica voor deze pagina
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuClose = document.getElementById("menu-close");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => mobileMenu.classList.add("active"));
+        menuClose.addEventListener("click", () => mobileMenu.classList.remove("active"));
+    </script>
+</body>
+</html>
